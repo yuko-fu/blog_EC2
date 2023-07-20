@@ -1,18 +1,18 @@
 # config valid only for current version of Capistrano
 lock '3.16.0'
 
-# デプロイするアプリケーション名
-set :application, 'アプリケーション名'
+# デプロイするblog_aws名
+set :application, 'blog_aws'
 
 # cloneするgitのレポジトリ
-# （xxxxxxxx：ユーザ名、yyyyyyyy：アプリケーション名）
+# （xxxxxxxx：ユーザ名、yyyyyyyy：blog_aws名）
 set :repo_url, 'https://github.com/yuko-fu/blog_EC2.git'
 
 # deployするブランチ。デフォルトでmainを使用している場合、masterをmainに変更してください。
 set :branch, ENV['BRANCH'] || 'master'
 
 # deploy先のディレクトリ。
-set :deploy_to, '/var/www/アプリケーション名'
+set :deploy_to, '/var/www/blog_aws'
 
 # シンボリックリンクをはるフォルダ・ファイル
 set :linked_files, %w{.env config/secrets.yml}
